@@ -1,5 +1,10 @@
 <?php
 include('../../config/database.php');
+
+// Limpiar y reiniciar la sesión antes de procesar el login
+session_start();
+session_unset();
+session_destroy();
 session_start();
 
 // Si ya está autenticado, redirige 
